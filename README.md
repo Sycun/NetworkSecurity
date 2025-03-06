@@ -1,25 +1,25 @@
-# 网络安全工具集
+# 🛡️ Network Security Toolkit
 
-## 功能特性
-- ARP欺骗实时检测与告警
-- 多线程TCP端口扫描（支持1-65535端口范围）
-- SSL/TLS证书链分析（支持TLS 1.3）
-- DNS查询流量监控与统计分析
-- 图形化界面操作（基于PyQt6）
-- 自动权限检测与sudo认证
+## 📖 项目概述
+集成式网络安全解决方案，提供从流量分析到漏洞检测的全套工具。包含10+核心模块，覆盖网络层到应用层的安全防护。
 
-## 核心模块
-![架构图](architecture.png)
-```mermaid
-flowchart LR
-  GUI[图形界面] --> ARP检测
-  GUI --> 端口扫描
-  GUI --> SSL分析
-  GUI --> DNS监控
-  ARP检测 --> Scapy
-  端口扫描 --> 多线程
-  SSL分析 --> Cryptography
-  DNS监控 --> pcap
+## 🚀 核心功能
+| 模块 | 文件路径 | 描述 |
+|------|---------|-----|
+| ARP欺骗检测 | `src/arp_spoof_detector.py` | 实时检测局域网ARP欺骗攻击 |
+| DNS监控 | `src/dns_monitor.py` | 分析异常DNS查询流量 |
+| SSL/TLS分析 | `src/ssl_tls_analyzer.py` | 检查服务器加密协议安全性 |
+| 漏洞扫描 | `src/vulnerability_scanner.py` | 综合CVE数据库的自动化扫描 |
+| 端口扫描 | `src/port_scanner.py` | 多线程TCP/UDP端口扫描器 |
+| 日志分析 | `src/log_analyzer.py` | 支持Apache/Nginx日志分析 |
+
+## 🛠️ 技术架构
+```
+Python 3.12
+├─ Scapy 2.5.0        # 网络数据包处理
+├─ cryptography 42.0  # 加密算法库
+├─ pytest 8.2         # 单元测试框架
+└─ coverage 7.4        # 测试覆盖率分析
 ```
 ```
 
