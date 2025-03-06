@@ -1,0 +1,27 @@
+# Python开发环境
+venv/
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# 测试覆盖报告
+.coverage
+coverage.xml
+htmlcov/
+
+# 操作系统文件
+.DS_Store
+
+# 项目构建相关
+build/
+dist/
+*.egg-info/
+
+# 编辑器配置
+.idea/
+.vscode/
+
+# 本地配置文件
+.env
+.env.local

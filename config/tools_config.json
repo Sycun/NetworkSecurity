@@ -1,0 +1,64 @@
+{
+  "tools": {
+    "ssh_bruteforce.py": {
+      "name": "SSH暴力破解",
+      "params": [
+        {"label": "目标IP", "type": "entry"},
+        {"label": "用户名", "type": "entry"},
+        {"label": "密码字典", "type": "file"},
+        {"label": "端口号", "type": "entry", "default": "22"},
+        {"label": "线程数", "type": "entry", "default": "5"}
+      ]
+    },
+    "port_scanner.py": {
+      "name": "端口扫描",
+      "params": [
+        {"label": "目标IP", "type": "entry"},
+        {"label": "端口范围", "type": "entry", "default": "1-1024"},
+        {"label": "扫描类型", "type": "combobox", "options": ["TCP", "UDP"]},
+        {"label": "超时时间(s)", "type": "entry", "default": "1"}
+      ]
+    },
+    "web_directory_bruteforce.py": {
+      "name": "Web目录爆破",
+      "params": [
+        {"label": "目标URL", "type": "entry"},
+        {"label": "字典文件", "type": "file"},
+        {"label": "扩展名", "type": "entry", "default": "php,html"},
+        {"label": "线程数", "type": "entry", "default": "10"}
+      ]
+    },
+    "arp_spoof_detector.py": {
+      "name": "ARP欺骗检测",
+      "params": [
+        {"label": "监控网卡", "type": "entry", "default": "eth0"},
+        {"label": "检测阈值(包/秒)", "type": "entry", "default": "15"},
+        {"label": "报警间隔(s)", "type": "entry", "default": "60"}
+      ]
+    },
+    "ssl_tls_analyzer.py": {
+      "name": "SSL/TLS分析",
+      "params": [
+        {"label": "目标域名", "type": "entry"},
+        {"label": "端口号", "type": "entry", "default": "443"},
+        {"label": "协议版本", "type": "combobox", "options": ["TLSv1.2", "TLSv1.3"]}
+      ]
+    },
+    "dns_monitor.py": {
+      "name": "DNS监控",
+      "params": [
+        {"label": "监控接口", "type": "entry", "default": "eth0"},
+        {"label": "持续时间(s)", "type": "entry", "default": "300"},
+        {"label": "可疑域名文件", "type": "file"}
+      ]
+    },
+    "vulnerability_scanner.py": {
+      "name": "漏洞扫描",
+      "params": [
+        {"label": "目标URL", "type": "entry"},
+        {"label": "扫描类型", "type": "combobox", "options": ["XSS", "SQL注入", "CSRF"]},
+        {"label": "线程数", "type": "entry", "default": "5"}
+      ]
+    }
+  }
+}
